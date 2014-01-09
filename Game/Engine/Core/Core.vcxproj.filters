@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="CoreDef.h" />
+    <ClInclude Include="FrameTimeManager.h" />
+    <ClInclude Include="Core_PCH.h" />
+    <ClInclude Include="SceneGraph\SceneAssimpConverter.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph\SceneGraph.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph\SceneNode.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph\SceneRenderableNode.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\TransformationComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph\AssimpNode.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Cameras\SceneCamera.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph\SceneRoot.h">
+      <Filter>SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\ComponentBase.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\ComponentTypes.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem\Entity.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem\EntityHandle.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem\EntityPool.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem\EntitySystem.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem\EntityTypes.h">
+      <Filter>EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SystemBase.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SystemTypes.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\RenderSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RenderableComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AnimationComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\BindingComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="System\CameraSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\CameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Cameras\FreeCameraComponent.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\LightComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\Terrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\UpdateComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="System\UpdateSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FrameTimeManager.cpp" />
+    <ClCompile Include="Core_PCH.cpp" />
+    <ClCompile Include="SceneGraph\SceneAssimpConverter.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph\SceneGraph.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph\SceneNode.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph\SceneRenderableNode.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\TransformationComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph\AssimpNode.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Cameras\SceneCamera.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph\SceneRoot.cpp">
+      <Filter>SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\ComponentBase.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem\Entity.cpp">
+      <Filter>EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem\EntityHandle.cpp">
+      <Filter>EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem\EntityPool.cpp">
+      <Filter>EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem\EntitySystem.cpp">
+      <Filter>EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SystemBase.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\RenderSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\RenderableComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AnimationComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\BindingComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="System\CameraSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\CameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Cameras\FreeCameraComponent.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\LightComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\Terrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\UpdateComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="System\UpdateSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SceneGraph">
+      <UniqueIdentifier>{b8e44980-9c78-4e00-95ee-7897fe60a2df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{fb20360d-5fb9-424a-93e4-911759f69396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cameras">
+      <UniqueIdentifier>{5f1ab39e-dff3-4d5c-90db-815b34f159de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntitySystem">
+      <UniqueIdentifier>{2bbfff75-457b-443e-9480-bbf50156e792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{2085d005-a69e-4430-9a5b-389f6b5beaf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{e1a24552-c2de-4aa6-8301-74b8be471173}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

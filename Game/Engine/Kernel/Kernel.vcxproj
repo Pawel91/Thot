@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A9501FBE-B44C-4130-9850-D06720A4E5A4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Kernel</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <EmbedManifest>true</EmbedManifest>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <EmbedManifest>true</EmbedManifest>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <TargetName>$(ProjectName)_d64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <TargetName>$(ProjectName)_r64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;KERNEL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/boost/include/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>Kernel_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>Kernel_PCH.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Shlwapi.lib;libboost_regex-vc110-mt-gd-1_52.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x86</AdditionalLibraryDirectories>
+      <Profile>true</Profile>
+    </Link>
+    <Manifest>
+      <ManifestFromManagedAssembly>
+      </ManifestFromManagedAssembly>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;KERNEL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\\</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <PrecompiledHeaderFile>Kernel_PCH.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Shlwapi.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x64</AdditionalLibraryDirectories>
+      <Profile>true</Profile>
+    </Link>
+    <Manifest>
+      <ManifestFromManagedAssembly>
+      </ManifestFromManagedAssembly>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;KERNEL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/boost/include/</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>Kernel_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>Kernel_PCH.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Shlwapi.lib;libboost_regex-vc110-mt-1_52.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;KERNEL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <PrecompiledHeaderFile>Kernel_PCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Shlwapi.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DataStructures\Array\Vector.cpp" />
+    <ClCompile Include="DataStructures\CString.cpp" />
+    <ClCompile Include="DebugSystem\Assert.cpp" />
+    <ClCompile Include="DebugSystem\DebugSystem.cpp" />
+    <ClCompile Include="DebugSystem\StackWalker.cpp" />
+    <ClCompile Include="DebugSystem\Tracing.cpp" />
+    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="FileSystem\File.cpp" />
+    <ClCompile Include="FileSystem\FileImpl.cpp" />
+    <ClCompile Include="FileSystem\FileMemory.cpp" />
+    <ClCompile Include="FileSystem\FileSystem.cpp" />
+    <ClCompile Include="FileSystem\Path.cpp" />
+    <ClCompile Include="Kernel_PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ManagerInterface.cpp" />
+    <ClCompile Include="MemoryManagement\Allocator.cpp" />
+    <ClCompile Include="MemoryManagement\FrameAllocator.cpp" />
+    <ClCompile Include="MemoryManagement\Heap.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryHandling.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryManager2.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryOperation.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryStatistics.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryTracker.cpp" />
+    <ClCompile Include="MemoryManagement\MemoryUtils.cpp" />
+    <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="Profiler\Profiler.cpp" />
+    <ClCompile Include="Regex\Regex.cpp" />
+    <ClCompile Include="RTTI.cpp" />
+    <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="ThreadApi\CriticalSection.cpp" />
+    <ClCompile Include="ThreadApi\Thread.cpp" />
+    <ClCompile Include="Time\Timer.cpp" />
+    <ClCompile Include="Utils\Command.cpp" />
+    <ClCompile Include="Utils\StringUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Basics.h" />
+    <ClInclude Include="Basics\CompilerSpecific.h" />
+    <ClInclude Include="Basics\MicrosoftSpecific.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="DataStructures\ArrayTypeBase.h" />
+    <ClInclude Include="DataStructures\Array\Array.h" />
+    <ClInclude Include="DataStructures\Array\Array2D.h" />
+    <ClInclude Include="DataStructures\Array\List.h" />
+    <ClInclude Include="DataStructures\Array\Vector.h" />
+    <ClInclude Include="DataStructures\Array\VectorHelpers.h" />
+    <ClInclude Include="DataStructures\ContainerBase.h" />
+    <ClInclude Include="DataStructures\CString.h" />
+    <ClInclude Include="DataStructures\DataStructures.h" />
+    <ClInclude Include="DataStructures\FixedString.h" />
+    <ClInclude Include="DataStructures\Stack.h" />
+    <ClInclude Include="DataStructures\Trees\BNode.h" />
+    <ClInclude Include="DataStructures\Trees\BSTree.h" />
+    <ClInclude Include="DataStructures\Trees\BTree.h" />
+    <ClInclude Include="DataTypes.h" />
+    <ClInclude Include="DebugSystem\Allocator.h" />
+    <ClInclude Include="DebugSystem\Assert.h" />
+    <ClInclude Include="DebugSystem\DebugSystem.h" />
+    <ClInclude Include="DebugSystem\StackWalker.h" />
+    <ClInclude Include="DebugSystem\Tracing.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="Environment.h" />
+    <ClInclude Include="Externals.h" />
+    <ClInclude Include="FileSystem\File.h" />
+    <ClInclude Include="FileSystem\FileImpl.h" />
+    <ClInclude Include="FileSystem\FileMemory.h" />
+    <ClInclude Include="FileSystem\FileSystem.h" />
+    <ClInclude Include="FileSystem\FileTypes.h" />
+    <ClInclude Include="FileSystem\Path.h" />
+    <ClInclude Include="Intrinsics.h" />
+    <ClInclude Include="Kernel.h" />
+    <ClInclude Include="KernelDef.h" />
+    <ClInclude Include="KernelUtils.h" />
+    <ClInclude Include="Kernel_PCH.h" />
+    <ClInclude Include="ManagerInterface.h" />
+    <ClInclude Include="MemoryManagement\Allocator.h" />
+    <ClInclude Include="MemoryManagement\FrameAllocator.h" />
+    <ClInclude Include="MemoryManagement\Heap.h" />
+    <ClInclude Include="MemoryManagement\MemoryConfig.h" />
+    <ClInclude Include="MemoryManagement\MemoryHandling.h" />
+    <ClInclude Include="MemoryManagement\MemoryManager2.h" />
+    <ClInclude Include="MemoryManagement\MemoryOperation.h" />
+    <ClInclude Include="MemoryManagement\MemoryStatistics.h" />
+    <ClInclude Include="MemoryManagement\MemoryTracker.h" />
+    <ClInclude Include="MemoryManagement\MemoryUtils.h" />
+    <ClInclude Include="Memory\Memory.h" />
+    <ClInclude Include="MetaTemplates\MetaTemplates.h" />
+    <ClInclude Include="MetaTemplates\ObjectConstructionPolicy.h" />
+    <ClInclude Include="MetaTemplates\TypeTraits.h" />
+    <ClInclude Include="MetaTemplates\TypeTraits_intrinsics.h" />
+    <ClInclude Include="Profiler\Profiler.h" />
+    <ClInclude Include="Regex\Regex.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RTTI.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="SingletonLazy.h" />
+    <ClInclude Include="ThotWindows.h" />
+    <ClInclude Include="ThreadApi\AutoLock.h" />
+    <ClInclude Include="ThreadApi\CriticalSection.h" />
+    <ClInclude Include="ThreadApi\Thread.h" />
+    <ClInclude Include="Time\Timer.h" />
+    <ClInclude Include="Utils\Command.h" />
+    <ClInclude Include="Utils\RefCounter.h" />
+    <ClInclude Include="Utils\SmartPointer.h" />
+    <ClInclude Include="Utils\SmartResource.h" />
+    <ClInclude Include="Utils\StringUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataStructures\Array\List.inl" />
+    <None Include="DataStructures\CString.inl" />
+    <None Include="DataStructures\FixedString.inl" />
+    <None Include="DataStructures\Trees\BSTree.inl" />
+    <None Include="DataStructures\Trees\BTree.inl" />
+    <None Include="DebugSystem\Allocator.inl" />
+    <None Include="MemoryManagement\StlAllocator.inl" />
+    <None Include="Utils\RefCounter.inl" />
+    <None Include="Utils\SmartPointer.inl" />
+    <None Include="Utils\SmartResource.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Kernel.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

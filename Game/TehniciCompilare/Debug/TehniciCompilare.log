@@ -1,0 +1,11 @@
+﻿Build started 10/31/2013 2:49:36 AM.
+     1>Project "t:\driver\PPC\Game\TehniciCompilare\TehniciCompilare.vcxproj" on node 3 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\TehniciCompilare.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..//Engine /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D TEHNICI_COMPILARE_EXPORTS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"TehniciCompilare_PCH.h" /Fp"Debug\TehniciCompilare.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FITehniciCompilare_PCH.h /analyze- /errorReport:prompt TehniciCompilare_PCH.cpp
+     1>Done Building Project "t:\driver\PPC\Game\TehniciCompilare\TehniciCompilare.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.55

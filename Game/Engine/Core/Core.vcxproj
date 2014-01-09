@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CEEFDE08-25B2-4379-89CD-10102F245EAC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Core</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <TargetName>$(ProjectName)_d64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <TargetName>$(ProjectName)_r64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/glew/include/gl;..//..//externals/opengl/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>Core_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>Core_PCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..//..//externals/glew/lib/glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/glew/include/gl;..//..//externals/opengl/include/;..//..//externals/assimp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>Core_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..//..//externals/glew/lib/glew32.lib;..//..//externals/assimp/lib/assimp_debug-dll_x64/assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/glew/include/gl;..//..//externals/opengl/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile>Core_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>Core_PCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..//..//externals/glew/lib/glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\\;..//..//externals/glew/include/gl;..//..//externals/opengl/include/;..//..//externals/assimp/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile>Core_PCH.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..//..//externals/glew/lib/glew32.lib;..//..//externals/assimp/lib/assimp_release-dll_x64/assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Cameras\FreeCameraComponent.h" />
+    <ClInclude Include="Cameras\SceneCamera.h" />
+    <ClInclude Include="Components\AnimationComponent.h" />
+    <ClInclude Include="Components\BindingComponent.h" />
+    <ClInclude Include="Components\CameraComponent.h" />
+    <ClInclude Include="Components\ComponentBase.h" />
+    <ClInclude Include="Components\ComponentTypes.h" />
+    <ClInclude Include="Components\LightComponent.h" />
+    <ClInclude Include="Components\RenderableComponent.h" />
+    <ClInclude Include="Components\TransformationComponent.h" />
+    <ClInclude Include="Components\UpdateComponent.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="CoreDef.h" />
+    <ClInclude Include="Core_PCH.h" />
+    <ClInclude Include="EntitySystem\Entity.h" />
+    <ClInclude Include="EntitySystem\EntityHandle.h" />
+    <ClInclude Include="EntitySystem\EntityPool.h" />
+    <ClInclude Include="EntitySystem\EntitySystem.h" />
+    <ClInclude Include="EntitySystem\EntityTypes.h" />
+    <ClInclude Include="FrameTimeManager.h" />
+    <ClInclude Include="SceneGraph\AssimpNode.h" />
+    <ClInclude Include="SceneGraph\SceneAssimpConverter.h" />
+    <ClInclude Include="SceneGraph\SceneGraph.h" />
+    <ClInclude Include="SceneGraph\SceneNode.h" />
+    <ClInclude Include="SceneGraph\SceneRenderableNode.h" />
+    <ClInclude Include="SceneGraph\SceneRoot.h" />
+    <ClInclude Include="System\CameraSystem.h" />
+    <ClInclude Include="System\RenderSystem.h" />
+    <ClInclude Include="System\SystemBase.h" />
+    <ClInclude Include="System\SystemTypes.h" />
+    <ClInclude Include="System\UpdateSystem.h" />
+    <ClInclude Include="Terrain\Terrain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cameras\FreeCameraComponent.cpp" />
+    <ClCompile Include="Cameras\SceneCamera.cpp" />
+    <ClCompile Include="Components\AnimationComponent.cpp" />
+    <ClCompile Include="Components\BindingComponent.cpp" />
+    <ClCompile Include="Components\CameraComponent.cpp" />
+    <ClCompile Include="Components\ComponentBase.cpp" />
+    <ClCompile Include="Components\LightComponent.cpp" />
+    <ClCompile Include="Components\RenderableComponent.cpp" />
+    <ClCompile Include="Components\TransformationComponent.cpp" />
+    <ClCompile Include="Components\UpdateComponent.cpp" />
+    <ClCompile Include="Core_PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Core_PCH.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EntitySystem\Entity.cpp" />
+    <ClCompile Include="EntitySystem\EntityHandle.cpp" />
+    <ClCompile Include="EntitySystem\EntityPool.cpp" />
+    <ClCompile Include="EntitySystem\EntitySystem.cpp" />
+    <ClCompile Include="FrameTimeManager.cpp" />
+    <ClCompile Include="SceneGraph\AssimpNode.cpp" />
+    <ClCompile Include="SceneGraph\SceneAssimpConverter.cpp" />
+    <ClCompile Include="SceneGraph\SceneGraph.cpp" />
+    <ClCompile Include="SceneGraph\SceneNode.cpp" />
+    <ClCompile Include="SceneGraph\SceneRenderableNode.cpp" />
+    <ClCompile Include="SceneGraph\SceneRoot.cpp" />
+    <ClCompile Include="System\CameraSystem.cpp" />
+    <ClCompile Include="System\RenderSystem.cpp" />
+    <ClCompile Include="System\SystemBase.cpp" />
+    <ClCompile Include="System\UpdateSystem.cpp" />
+    <ClCompile Include="Terrain\Terrain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Input\Input.vcxproj">
+      <Project>{e519ff35-c5f0-461d-b438-d8bb359dbcac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernel\Kernel.vcxproj">
+      <Project>{a9501fbe-b44c-4130-9850-d06720a4e5a4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MathCore\MathCore.vcxproj">
+      <Project>{30c7f6bb-128a-4517-8a31-9cc99d8a28bb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Render\Render.vcxproj">
+      <Project>{d6aacf29-45e1-4185-a8e9-ce59010dc252}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

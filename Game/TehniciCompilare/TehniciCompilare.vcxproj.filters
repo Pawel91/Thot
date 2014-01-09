@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TehniciCompilare.cpp" />
+    <ClCompile Include="LexicalAnalyzer\Lexer.cpp">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="TehniciCompilare_PCH.cpp" />
+    <ClCompile Include="LexicalAnalyzer\TokenProcessor.cpp">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzer\TokenProcessorInstances.cpp">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzer\TokenCharacterHelper.cpp">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzer\Token.cpp">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler\Compiler.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler\EntryPoint.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="FiniteStateMachine">
+      <UniqueIdentifier>{f886d7f4-8bad-4b52-922e-4b6ac26b0a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LexicalAnalyzer">
+      <UniqueIdentifier>{34c6cd83-3be5-42e2-a18a-0a97881a42b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{05a21310-2f10-45c6-8abe-52759217323c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LexicalAnalyzer\Lexer.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine\FiniteStateMachine.h">
+      <Filter>FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="TehniciCompilare_PCH.h" />
+    <ClInclude Include="LexicalAnalyzer\TokenTypes.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine\State.h">
+      <Filter>FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine\StateTypes.h">
+      <Filter>FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer\TokenProcessor.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer\TokenProcessorInstances.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer\TokenCharacterHelper.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine\PatternMatcher.h">
+      <Filter>FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine\MultiWordMatcher.h">
+      <Filter>FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer\Token.h">
+      <Filter>LexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler\Compiler.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler\EntryPoint.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="TehniciCompilareDefs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FiniteStateMachine\State.inl">
+      <Filter>FiniteStateMachine</Filter>
+    </None>
+    <None Include="FiniteStateMachine\FiniteStateMachine.inl">
+      <Filter>FiniteStateMachine</Filter>
+    </None>
+    <None Include="FiniteStateMachine\MultiWordMatcher.inl">
+      <Filter>FiniteStateMachine</Filter>
+    </None>
+  </ItemGroup>
+</Project>

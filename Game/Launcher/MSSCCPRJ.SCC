@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[Launcher.vcxproj]
+SCC_Aux_Path = "P4SCC#localhost:1666##Radu-Cristian.Pavel##driver"
+SCC_Project_Name = Perforce Project

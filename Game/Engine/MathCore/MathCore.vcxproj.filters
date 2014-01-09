@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="MathCoreDef.h" />
+    <ClInclude Include="Matrix\Mat3.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix\Mat4.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix\Matrix.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Quaternion\Quat.h">
+      <Filter>Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector\Vector.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="MathCore.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="MathCore_PCH.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Matrix\Mat3.cpp">
+      <Filter>Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix\Mat4.cpp">
+      <Filter>Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix\Matrix.cpp">
+      <Filter>Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Quaternion\Quat.cpp">
+      <Filter>Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector\Vector.cpp">
+      <Filter>Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="MathCore_PCH.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Matrix">
+      <UniqueIdentifier>{61556c0f-b44d-486b-944b-8265157f6c95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{fee80fcb-cdce-4c52-a3a2-05a2e8276db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quaternion">
+      <UniqueIdentifier>{c810976c-bb85-4785-ad92-dd7fe56bff9f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

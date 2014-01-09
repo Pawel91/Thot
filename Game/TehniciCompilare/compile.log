@@ -1,0 +1,16 @@
+1>------ Rebuild All started: Project: CompilerDummy, Configuration: Release Win32 ------
+1>Build started 5/28/2013 10:05:17 PM.
+1>_PrepareForClean:
+1>  Deleting file "C:\Users\Radu\Documents\Visual Studio 2012\Projects\CompilerDummy\tmp\CompilerDummy.lastbuildstate".
+1>InitializeBuildStatus:
+1>  Touching "C:\Users\Radu\Documents\Visual Studio 2012\Projects\CompilerDummy\tmp\CompilerDummy.unsuccessfulbuild".
+1>ClCompile:
+1>  CompilerDummy.cpp
+1>CompilerDummy.cpp(2): fatal error C1004: unexpected end-of-file found
+1>  stdafx.cpp
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.14
+========== Rebuild All: 0 succeeded, 1 failed, 0 skipped ==========
+

@@ -1,0 +1,185 @@
+﻿Build started 10/31/2013 11:53:18 PM.
+     1>Project "t:\driver\TFS\PPC\Game\Engine\Kernel\Kernel.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Kernel.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /I..//..//externals/boost/include/ /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D KERNEL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"Kernel_PCH.h" /Fp"Debug\Kernel.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIKernel_PCH.h /analyze- /errorReport:prompt Kernel_PCH.cpp
+         Kernel_PCH.cpp
+         THOT_COMPILE_OUTPUT: THOT_COMPILER_MICROSOFT
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_WINDOWS
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_RVALUE_REFERENCE
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_MOVE_CONSTRUCTOR
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_EXTERN_TEMPLATE
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_ARCH_X86
+         THOT_COMPILE_OUTPUT: THOT UNICODE IS ENABLED
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /I..//..//externals/boost/include/ /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D KERNEL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"Kernel_PCH.h" /Fp"Debug\Kernel.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIKernel_PCH.h /analyze- /errorReport:prompt DataStructures\CString.cpp DebugSystem\Assert.cpp DebugSystem\DebugSystem.cpp DebugSystem\StackWalker.cpp DebugSystem\Tracing.cpp Environment.cpp FileSystem\File.cpp FileSystem\FileImpl.cpp FileSystem\FileMemory.cpp FileSystem\FileSystem.cpp FileSystem\Path.cpp ManagerInterface.cpp MemoryManagement\Heap.cpp MemoryManagement\MemoryHandling.cpp MemoryManagement\MemoryManager2.cpp MemoryManagement\MemoryOperation.cpp MemoryManagement\MemoryStatistics.cpp MemoryManagement\MemoryTracker.cpp Memory\Memory.cpp Profiler\Profiler.cpp Regex\Regex.cpp RTTI.cpp Singleton.cpp ThreadApi\Thread.cpp Time\Timer.cpp Utils\Command.cpp Utils\StringUtils.cpp
+         StringUtils.cpp
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(191): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(177) : while compiling class template member function 'void CVector<T>::Resize(u64)'
+                 with
+                 [
+                     T=CString
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(79) : see reference to function template instantiation 'void CVector<T>::Resize(u64)' being compiled
+                 with
+                 [
+                     T=CString
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(78) : while compiling class template member function 'void CVector<T>::IncrementArraySize(void)'
+                 with
+                 [
+                     T=CString
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(114) : see reference to function template instantiation 'void CVector<T>::IncrementArraySize(void)' being compiled
+                 with
+                 [
+                     T=CString
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(113) : while compiling class template member function 'u64 CVector<T>::Add(const T &)'
+                 with
+                 [
+                     T=CString
+                 ]
+                 Utils\StringUtils.cpp(53) : see reference to function template instantiation 'u64 CVector<T>::Add(const T &)' being compiled
+                 with
+                 [
+                     T=CString
+                 ]
+                 Utils\StringUtils.cpp(53) : see reference to class template instantiation 'CVector<T>' being compiled
+                 with
+                 [
+                     T=CString
+                 ]
+         Command.cpp
+         Timer.cpp
+         Thread.cpp
+         Singleton.cpp
+     1>t:\driver\TFS\PPC\Game\Engine\Kernel/Intrinsics.h(17): fatal error C1189: #error :  NOT IMPLEMENTED ON x86
+         RTTI.cpp
+         Regex.cpp
+         Profiler.cpp
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(39): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(35) : while compiling class template member function 'CVector<T>::CVector(u64)'
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\profiler\Profiler.h(78) : see reference to class template instantiation 'CVector<T>' being compiled
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(191): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(177) : while compiling class template member function 'void CVector<T>::Resize(u64)'
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(67) : see reference to function template instantiation 'void CVector<T>::Resize(u64)' being compiled
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(24): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(22) : while compiling class template member function 'void CVector<T>::InitFromRawData(const T *,u64)'
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(17) : see reference to function template instantiation 'void CVector<T>::InitFromRawData(const T *,u64)' being compiled
+                 with
+                 [
+                     T=ThotProfiler::CPlaceID *
+                 ]
+         Memory.cpp
+         MemoryTracker.cpp
+         MemoryStatistics.cpp
+         MemoryOperation.cpp
+         MemoryManager2.cpp
+     1>MemoryManagement\MemoryManager2.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : see declaration of 'strcpy'
+     1>MemoryManagement\MemoryManager2.cpp(51): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : see declaration of 'strcpy'
+         MemoryHandling.cpp
+     1>MemoryManagement\MemoryHandling.cpp(42): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : see declaration of 'strcpy'
+         Heap.cpp
+     1>MemoryManagement\Heap.cpp(44): warning C4244: 'argument' : conversion from 'u64' to 'SIZE_T', possible loss of data
+         ManagerInterface.cpp
+         Path.cpp
+     1>FileSystem\Path.cpp(31): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(449) : see declaration of 'getenv'
+         FileSystem.cpp
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(39): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(35) : while compiling class template member function 'CVector<T>::CVector(u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\filesystem\FileMemory.h(11) : see reference to class template instantiation 'CVector<T>' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(191): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(177) : while compiling class template member function 'void CVector<T>::Resize(u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(67) : see reference to function template instantiation 'void CVector<T>::Resize(u64)' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(24): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(22) : while compiling class template member function 'void CVector<T>::InitFromRawData(const T *,u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(17) : see reference to function template instantiation 'void CVector<T>::InitFromRawData(const T *,u64)' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+         FileMemory.cpp
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(39): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(35) : while compiling class template member function 'CVector<T>::CVector(u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\filesystem\FileMemory.h(11) : see reference to class template instantiation 'CVector<T>' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(191): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(177) : while compiling class template member function 'void CVector<T>::Resize(u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 FileSystem\FileMemory.cpp(51) : see reference to function template instantiation 'void CVector<T>::Resize(u64)' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+     1>t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(24): warning C4244: 'initializing' : conversion from 'u64' to 'unsigned int', possible loss of data
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(22) : while compiling class template member function 'void CVector<T>::InitFromRawData(const T *,u64)'
+                 with
+                 [
+                     T=byte
+                 ]
+                 t:\driver\tfs\ppc\game\engine\kernel\datastructures\array\List.inl(17) : see reference to function template instantiation 'void CVector<T>::InitFromRawData(const T *,u64)' being compiled
+                 with
+                 [
+                     T=byte
+                 ]
+         FileImpl.cpp
+     1>Done Building Project "t:\driver\TFS\PPC\Game\Engine\Kernel\Kernel.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:12.53

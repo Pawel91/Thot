@@ -1,0 +1,40 @@
+﻿Build started 10/19/2013 10:25:01 PM.
+     1>Project "t:\driver\PPC\Game\Engine\Input\Input.vcxproj" on node 3 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Input.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D INPUT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"Input_PCH.h" /Fp"Debug\Input.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIInput_PCH.h /analyze- /errorReport:prompt Input_PCH.cpp
+         Input_PCH.cpp
+         THOT_COMPILE_OUTPUT: THOT_COMPILER_MICROSOFT
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_WINDOWS
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_RVALUE_REFERENCE
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_MOVE_CONSTRUCTOR
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_EXTERN_TEMPLATE
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_ARCH_X86
+         THOT_COMPILE_OUTPUT: THOT UNICODE IS ENABLED
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D INPUT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"Input_PCH.h" /Fp"Debug\Input.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIInput_PCH.h /analyze- /errorReport:prompt Input.cpp InputImpl.cpp InputTypes.cpp KeyboardInput.cpp MouseInput.cpp
+         MouseInput.cpp
+         KeyboardInput.cpp
+         InputTypes.cpp
+         InputImpl.cpp
+         Input.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"T:\driver\PPC\Game\Debug\Input.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"T:\driver\PPC\Game\Debug\Input.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"T:\driver\PPC\Game\Debug\Input.lib" /MACHINE:X86 /PROFILE /DLL Debug\Input.obj
+         Debug\InputImpl.obj
+         Debug\InputTypes.obj
+         Debug\Input_PCH.obj
+         Debug\KeyboardInput.obj
+         Debug\MouseInput.obj
+         T:\driver\PPC\Game\Debug\Kernel.lib
+         T:\driver\PPC\Game\Debug\MathCore.lib
+            Creating library T:\driver\PPC\Game\Debug\Input.lib and object T:\driver\PPC\Game\Debug\Input.exp
+         Input.vcxproj -> T:\driver\PPC\Game\Debug\Input.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\Input.unsuccessfulbuild".
+         Touching "Debug\Input.lastbuildstate".
+     1>Done Building Project "t:\driver\PPC\Game\Engine\Input\Input.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.16

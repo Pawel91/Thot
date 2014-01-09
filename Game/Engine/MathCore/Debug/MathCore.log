@@ -1,0 +1,19 @@
+﻿Build started 10/31/2013 2:49:35 AM.
+     1>Project "t:\driver\PPC\Game\Engine\MathCore\MathCore.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\MathCore.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D MATHCORE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"MathCore_PCH.h" /Fp"Debug\MathCore.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIMathCore_PCH.h /analyze- /errorReport:prompt MathCore_PCH.cpp
+         MathCore_PCH.cpp
+         THOT_COMPILE_OUTPUT: THOT_COMPILER_MICROSOFT
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_WINDOWS
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_RVALUE_REFERENCE
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_MOVE_CONSTRUCTOR
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_EXTERN_TEMPLATE
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_ARCH_X86
+         THOT_COMPILE_OUTPUT: THOT UNICODE IS ENABLED
+     1>Done Building Project "t:\driver\PPC\Game\Engine\MathCore\MathCore.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.56

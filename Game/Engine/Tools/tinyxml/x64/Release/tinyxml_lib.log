@@ -1,0 +1,25 @@
+﻿Build started 6/30/2013 6:23:09 PM.
+     1>Project "E:\Programming\Workspace GameDev\Workspace Licenta\Game\Engine\Tools\tinyxml\tinyxml_lib.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\tinyxml.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /D WIN32 /D NDEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt tinystr.cpp tinyxml.cpp tinyxmlerror.cpp tinyxmlparser.cpp
+         tinystr.cpp
+         tinyxml.cpp
+         tinyxmlerror.cpp
+         tinyxmlparser.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\Lib.exe /OUT:"E:\Programming\Workspace GameDev\Workspace Licenta\Game\x64\Release\tinyxml.lib" /NOLOGO /MACHINE:X64 x64\Release\tinystr.obj
+         x64\Release\tinyxml.obj
+         x64\Release\tinyxmlerror.obj
+         x64\Release\tinyxmlparser.obj
+         tinyxml_lib.vcxproj -> E:\Programming\Workspace GameDev\Workspace Licenta\Game\x64\Release\tinyxml.lib
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\tinyxml.unsuccessfulbuild".
+         Touching "x64\Release\tinyxml.lastbuildstate".
+     1>Done Building Project "E:\Programming\Workspace GameDev\Workspace Licenta\Game\Engine\Tools\tinyxml\tinyxml_lib.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.16

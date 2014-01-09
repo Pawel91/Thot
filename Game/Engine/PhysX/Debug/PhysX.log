@@ -1,0 +1,31 @@
+﻿Build started 10/19/2013 10:25:01 PM.
+     1>Project "t:\driver\PPC\Game\Engine\PhysX\PhysX.vcxproj" on node 4 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\PhysX.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PHYSX_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"PhysX_PCH.h" /Fp"Debug\PhysX.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIPhysX_PCH.h /analyze- /errorReport:prompt PhysX_PCH.cpp
+         PhysX_PCH.cpp
+         THOT_COMPILE_OUTPUT: THOT_COMPILER_MICROSOFT
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_WINDOWS
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_RVALUE_REFERENCE
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_MOVE_CONSTRUCTOR
+         THOT_COMPILE_OUTPUT: THOT_ENABLE_EXTERN_TEMPLATE
+         THOT_COMPILE_OUTPUT: THOT_PLATFORM_ARCH_X86
+         THOT_COMPILE_OUTPUT: THOT UNICODE IS ENABLED
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\\ /Zi /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PHYSX_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"PhysX_PCH.h" /Fp"Debug\PhysX.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FIPhysX_PCH.h /analyze- /errorReport:prompt PhysX2DUtils.cpp
+         PhysX2DUtils.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"T:\driver\PPC\Game\Debug\PhysX.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"T:\driver\PPC\Game\Debug\PhysX.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"T:\driver\PPC\Game\Debug\PhysX.lib" /MACHINE:X86 /PROFILE /DLL Debug\PhysX2DUtils.obj
+         Debug\PhysX_PCH.obj
+         T:\driver\PPC\Game\Debug\Kernel.lib
+         T:\driver\PPC\Game\Debug\MathCore.lib
+            Creating library T:\driver\PPC\Game\Debug\PhysX.lib and object T:\driver\PPC\Game\Debug\PhysX.exp
+         PhysX.vcxproj -> T:\driver\PPC\Game\Debug\PhysX.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\PhysX.unsuccessfulbuild".
+         Touching "Debug\PhysX.lastbuildstate".
+     1>Done Building Project "t:\driver\PPC\Game\Engine\PhysX\PhysX.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.41

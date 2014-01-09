@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameEntryPoint.cpp" />
+    <ClCompile Include="MOD_GameManager.cpp" />
+    <ClCompile Include="GameFlow.cpp" />
+    <ClCompile Include="Game_PCH.cpp" />
+    <ClCompile Include="Gameplay\Components\SpaceShipUpdateComponent.cpp">
+      <Filter>Gameplay\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Components\SpaceShipCameraComponent.cpp">
+      <Filter>Gameplay\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Components\RobotUpdateComponent.cpp">
+      <Filter>Gameplay\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Components\RobotCameraComponent.cpp">
+      <Filter>Gameplay\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameEntryPoint.h" />
+    <ClInclude Include="GameDef.h" />
+    <ClInclude Include="MOD_GameManager.h" />
+    <ClInclude Include="GameFlow.h" />
+    <ClInclude Include="Game_PCH.h" />
+    <ClInclude Include="Gameplay\Components\SpaceShipUpdateComponent.h">
+      <Filter>Gameplay\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Components\SpaceShipCameraComponent.h">
+      <Filter>Gameplay\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Components\RobotUpdateComponent.h">
+      <Filter>Gameplay\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Components\RobotCameraComponent.h">
+      <Filter>Gameplay\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Gameplay">
+      <UniqueIdentifier>{ec87fe04-f18f-4542-bcda-7eabdd09f813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay\Components">
+      <UniqueIdentifier>{b6202fea-afe3-4143-8fc4-8a244d9196e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+﻿Build started 10/19/2013 10:25:17 PM.
+     1>Project "t:\driver\PPC\Game\Engine\Tools\ToolFramework_TextureExporter\ToolFramework_TextureExporter.vcxproj" on node 3 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\ToolFramework_TextureExporter.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ToolFramework_TextureExporter.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TextureExporter_PCH.cpp ToolFramework_TextureExporter.cpp
+         ToolFramework_TextureExporter.cpp
+     1>t:\driver\ppc\game\engine\tools\toolframework_textureexporter\toolframework_textureexporter.cpp(318): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         TextureExporter_PCH.cpp
+     1>t:\driver\ppc\game\engine\tools\toolframework_textureexporter\textureexporter_pch.cpp(2): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+     1>Done Building Project "t:\driver\PPC\Game\Engine\Tools\ToolFramework_TextureExporter\ToolFramework_TextureExporter.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.13

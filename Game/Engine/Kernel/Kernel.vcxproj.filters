@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DebugSystem">
+      <UniqueIdentifier>{48d7b14a-c53c-48d2-a4b6-3a9d96784b47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{1086bd8c-77fb-4df1-abf5-17d80f6e159e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\Array">
+      <UniqueIdentifier>{4273dc14-decf-4963-b68f-2dd0552515c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileSystem">
+      <UniqueIdentifier>{846026a8-b361-49d2-9eb5-f6770a27ed97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{3fd55cec-3f80-4e5b-8336-0a585634c026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThreadApi">
+      <UniqueIdentifier>{13faaabc-5d41-43c6-9e4d-d6ea9acd45a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Regex">
+      <UniqueIdentifier>{774efdbe-921f-4c02-bbb1-a3bbb69eddb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\Trees">
+      <UniqueIdentifier>{eed07ec6-975c-4e0b-9a69-db6ac1f5b9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{6efbaf61-5879-43e1-8efe-7eb5cf20ba4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Profiler">
+      <UniqueIdentifier>{bbd7e1f4-b944-4a85-bfa2-534ef11cdcaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugSystem\Resources">
+      <UniqueIdentifier>{84630080-be52-4a74-ac38-25fbcb8f2d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemoryManagement">
+      <UniqueIdentifier>{dc822995-044c-4959-8ddc-6a49af8758f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MetaTemplates">
+      <UniqueIdentifier>{c6646c88-c85b-4fdc-b70d-0f9a84d37375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{65f7a706-e42c-4fbf-b9ff-bb085bc445a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Basics">
+      <UniqueIdentifier>{bb100219-0305-45e5-a968-5276b257b3e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DebugSystem\Assert.cpp">
+      <Filter>DebugSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugSystem\DebugSystem.cpp">
+      <Filter>DebugSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugSystem\Tracing.cpp">
+      <Filter>DebugSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructures\CString.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="RTTI.cpp" />
+    <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="ManagerInterface.cpp" />
+    <ClCompile Include="Utils\StringUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileSystem.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileImpl.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\FileMemory.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\File.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\Path.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Kernel_PCH.cpp" />
+    <ClCompile Include="Environment.cpp" />
+    <ClCompile Include="ThreadApi\Thread.cpp">
+      <Filter>ThreadApi</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Regex.cpp">
+      <Filter>Regex</Filter>
+    </ClCompile>
+    <ClCompile Include="Time\Timer.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Profiler\Profiler.cpp">
+      <Filter>Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugSystem\StackWalker.cpp">
+      <Filter>DebugSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Command.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\Heap.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryTracker.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryStatistics.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\Memory.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryOperation.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryHandling.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryManager2.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadApi\CriticalSection.cpp">
+      <Filter>ThreadApi</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStructures\Array\Vector.cpp">
+      <Filter>DataStructures\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\FrameAllocator.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\MemoryUtils.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\Allocator.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KernelDef.h" />
+    <ClInclude Include="DebugSystem\Assert.h">
+      <Filter>DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugSystem\DebugSystem.h">
+      <Filter>DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel.h" />
+    <ClInclude Include="DataTypes.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="DebugSystem\Tracing.h">
+      <Filter>DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelUtils.h" />
+    <ClInclude Include="DataStructures\CString.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\DataStructures.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Stack.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Array\Array.h">
+      <Filter>DataStructures\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Array\Array2D.h">
+      <Filter>DataStructures\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Array\List.h">
+      <Filter>DataStructures\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="RTTI.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="ManagerInterface.h" />
+    <ClInclude Include="FileSystem\File.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileTypes.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\StringUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileSystem.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileImpl.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\FileMemory.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\Path.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals.h" />
+    <ClInclude Include="DataStructures\ArrayTypeBase.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\RefCounter.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\SmartResource.h" />
+    <ClInclude Include="Basics.h" />
+    <ClInclude Include="Kernel_PCH.h" />
+    <ClInclude Include="Utils\SmartPointer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment.h" />
+    <ClInclude Include="ThreadApi\Thread.h">
+      <Filter>ThreadApi</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Regex.h">
+      <Filter>Regex</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Trees\BNode.h">
+      <Filter>DataStructures\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Trees\BTree.h">
+      <Filter>DataStructures\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Trees\BSTree.h">
+      <Filter>DataStructures\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="ThotWindows.h" />
+    <ClInclude Include="DebugSystem\Allocator.h">
+      <Filter>DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Time\Timer.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Profiler\Profiler.h">
+      <Filter>Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugSystem\StackWalker.h">
+      <Filter>DebugSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Utils\Command.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\Heap.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryTracker.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryStatistics.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaTemplates\MetaTemplates.h">
+      <Filter>MetaTemplates</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaTemplates\TypeTraits.h">
+      <Filter>MetaTemplates</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaTemplates\TypeTraits_intrinsics.h">
+      <Filter>MetaTemplates</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Memory.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryConfig.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryOperation.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryHandling.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\MemoryManager2.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Intrinsics.h" />
+    <ClInclude Include="ThreadApi\CriticalSection.h">
+      <Filter>ThreadApi</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadApi\AutoLock.h">
+      <Filter>ThreadApi</Filter>
+    </ClInclude>
+    <ClInclude Include="Basics\CompilerSpecific.h">
+      <Filter>Basics</Filter>
+    </ClInclude>
+    <ClInclude Include="Basics\MicrosoftSpecific.h">
+      <Filter>Basics</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="DataStructures\Array\Vector.h">
+      <Filter>DataStructures\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Array\VectorHelpers.h">
+      <Filter>DataStructures\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\ContainerBase.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\FrameAllocator.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonLazy.h" />
+    <ClInclude Include="MemoryManagement\MemoryUtils.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\Allocator.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaTemplates\ObjectConstructionPolicy.h">
+      <Filter>MetaTemplates</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\FixedString.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataStructures\CString.inl">
+      <Filter>DataStructures</Filter>
+    </None>
+    <None Include="DataStructures\Array\List.inl">
+      <Filter>DataStructures\Array</Filter>
+    </None>
+    <None Include="Utils\RefCounter.inl">
+      <Filter>Utils</Filter>
+    </None>
+    <None Include="Utils\SmartResource.inl" />
+    <None Include="Utils\SmartPointer.inl">
+      <Filter>Utils</Filter>
+    </None>
+    <None Include="DataStructures\Trees\BTree.inl">
+      <Filter>DataStructures\Trees</Filter>
+    </None>
+    <None Include="DataStructures\Trees\BSTree.inl">
+      <Filter>DataStructures\Trees</Filter>
+    </None>
+    <None Include="DebugSystem\Allocator.inl">
+      <Filter>DebugSystem</Filter>
+    </None>
+    <None Include="MemoryManagement\StlAllocator.inl">
+      <Filter>MemoryManagement</Filter>
+    </None>
+    <None Include="DataStructures\FixedString.inl">
+      <Filter>DataStructures</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Kernel.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{c2db3d3f-6a46-4007-b68a-dd84e7ebb894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{dc5b13b0-cc62-4ea1-b98e-5b0af3cdb2e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderTarget">
+      <UniqueIdentifier>{a16bdddb-4cc2-4d86-8bbe-2a45b20829dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lights">
+      <UniqueIdentifier>{743c5335-556e-4697-b445-8833dea87f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{7afb477f-accb-4fc4-bafc-44622ece2714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buffers">
+      <UniqueIdentifier>{87d3d52f-423b-4353-a6f5-268dc31ed8fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderFramework">
+      <UniqueIdentifier>{552a0ef7-1670-4e94-a63d-a1d62e71d78f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderFramework\ShaderData">
+      <UniqueIdentifier>{b885adfe-ab0a-4feb-b0bd-4814ac0a692e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderMath">
+      <UniqueIdentifier>{ebd36fce-db8f-40b8-a6d5-1fab44996ab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{8e441461-3381-4d7d-a39d-d38916e47095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials">
+      <UniqueIdentifier>{1cc708e5-b896-4e24-b703-1b0c84fdd015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkeletonAnimation">
+      <UniqueIdentifier>{a945bd3f-90b0-45cc-921b-2e85c0b6241f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLWrapper">
+      <UniqueIdentifier>{1977838e-4fcb-4c46-8861-46439ae35af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderFramework\ShaderLayout">
+      <UniqueIdentifier>{f0e01549-1ed7-4865-baf5-2d5c39e20da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{47553e78-5735-4c8f-8be5-7780471d353d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{c0fde29c-8ab7-433c-9436-700ceb9e55d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GLExtension.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="RenderCamera.cpp" />
+    <ClCompile Include="RenderCameraGL.cpp" />
+    <ClCompile Include="RenderGL.cpp" />
+    <ClCompile Include="Textures\Texture.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain\Skybox.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTarget\RenderTarget.cpp">
+      <Filter>RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTarget\RenderTargetGL.cpp">
+      <Filter>RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="Images\Image.cpp">
+      <Filter>Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Images\TargaImg.cpp">
+      <Filter>Images</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\LightBase.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Lights\LightManager.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Render_PCH.cpp" />
+    <ClCompile Include="ShaderFramework\Shader.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMath\BoundingBox.cpp">
+      <Filter>RenderMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\Mesh.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffers\BufferTypes.cpp">
+      <Filter>Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffers\Vertex.cpp">
+      <Filter>Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh\MeshBase.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Materials\Material.cpp">
+      <Filter>Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonAnimation\Bone.cpp">
+      <Filter>SkeletonAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonAnimation\Skeleton.cpp">
+      <Filter>SkeletonAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonAnimation\BoneState.cpp">
+      <Filter>SkeletonAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonAnimation\BoneKeyFrame.cpp">
+      <Filter>SkeletonAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonAnimation\BoneTrack.cpp">
+      <Filter>SkeletonAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\externals\opengl\include\gl_core_4_1.cpp">
+      <Filter>GLWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderParameter.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderParameterProvider.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderLayout\ShaderUniform.cpp">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="GLWrapper\OpenGL.cpp">
+      <Filter>GLWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderLayout\ShaderData.cpp">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderManager.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderParameterProviderManager.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderParameterProviderDescriptor.cpp">
+      <Filter>ShaderFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderFramework\ShaderLayout\ShaderLayout.cpp">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\HeightMap.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GLExtension.h" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="RenderCamera.h" />
+    <ClInclude Include="RenderCameraGL.h" />
+    <ClInclude Include="RenderGL.h" />
+    <ClInclude Include="Textures\Texture.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures\TextureTypes.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain\Skybox.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTarget\RenderTarget.h">
+      <Filter>RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTarget\RenderTargetGL.h">
+      <Filter>RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="Images\Image.h">
+      <Filter>Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Images\ImageTypes.h">
+      <Filter>Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Images\TargaImg.h">
+      <Filter>Images</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\LightBase.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Lights\LightManager.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDef.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Lights\LightTypes.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Render_PCH.h" />
+    <ClInclude Include="Buffers\VertexBuffer.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\Shader.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMath\BoundingBox.h">
+      <Filter>RenderMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\Mesh.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTypes.h" />
+    <ClInclude Include="Mesh\MeshTypes.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\BufferTypes.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\VertexArray.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\Vertex.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderTypes.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\VertexConstructionDefines.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\IndexBuffer.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\VertexTypes.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\MeshBase.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Materials\MaterialTypes.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Materials\Material.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\Bone.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\Skeleton.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\BoneBase.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\BoneState.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\BoneKeyFrame.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeletonAnimation\BoneTrack.h">
+      <Filter>SkeletonAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\VertexDescriptor.h">
+      <Filter>Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="GLWrapper\OpenGL.h">
+      <Filter>GLWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\externals\opengl\include\gl_core_4_1.hpp">
+      <Filter>GLWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameter.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterImpl.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterProvider.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderLayout\ShaderUniform.h">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderLayout\ShaderUniformBlock.h">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterTypes.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderLayout\ShaderData.h">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderManager.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterProviderManager.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterProviderTypes.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterProviderDescriptor.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderParameterTraits.h">
+      <Filter>ShaderFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFramework\ShaderLayout\ShaderLayout.h">
+      <Filter>ShaderFramework\ShaderLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\HeightMap.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Buffers\VertexArray.inl">
+      <Filter>Buffers</Filter>
+    </None>
+    <None Include="Buffers\VertexBuffer.inl">
+      <Filter>Buffers</Filter>
+    </None>
+    <None Include="Buffers\IndexBuffer.inl">
+      <Filter>Buffers</Filter>
+    </None>
+    <None Include="Mesh\Mesh.inl">
+      <Filter>Mesh</Filter>
+    </None>
+    <None Include="ShaderFramework\ShaderParameter.inl">
+      <Filter>ShaderFramework</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\skinning_f.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\skinning_v.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\spaceship_f.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\spaceship_v.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\terrain_f.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+    <None Include="..\..\Data\Shaders\terrain_v.glsl">
+      <Filter>ShaderFramework\ShaderData</Filter>
+    </None>
+  </ItemGroup>
+</Project>
