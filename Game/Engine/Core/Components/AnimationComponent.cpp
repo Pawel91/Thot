@@ -5,6 +5,7 @@
 CAnimationComponent::CAnimationComponent()
     : m_skeleton (NULL)
 {
+    //comment 
 }
 
 //--------------------------------------------------
