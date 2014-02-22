@@ -1,3 +1,5 @@
+#include "Kernel_PCH.h"
+
 #include "XMLNode.h"
 
 void*   rapidXmlAllocator_allocate  ( thTSize size)

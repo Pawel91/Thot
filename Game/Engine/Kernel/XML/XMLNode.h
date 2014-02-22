@@ -5,7 +5,7 @@
 #include "Kernel\DataStructures\CString.h"
 
 
-
+ 
 class CXmlNode
 {
 

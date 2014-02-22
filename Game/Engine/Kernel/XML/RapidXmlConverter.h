@@ -8,7 +8,7 @@
 #define RAPIDXML_NO_EXCEPTIONS
 #define assert THOT_ASSERT
 #define RAPIDXML_STATIC_POOL_SIZE 1
-
+ 
 void*   rapidXmlAllocator_allocate  ( thTSize size );
 void    rapidXmlAllocator_free      ( void* data );
 

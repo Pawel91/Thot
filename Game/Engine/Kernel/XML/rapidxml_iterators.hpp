@@ -152,7 +152,7 @@ namespace rapidxml
             ++this;
             return tmp;
         }
-
+        
         bool operator ==(const attribute_iterator<Ch> &rhs)
         {
             return m_attribute == rhs.m_attribute;

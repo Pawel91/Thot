@@ -1,7 +1,7 @@
 #ifndef __KERNEL_XML_TYPES_H__
 #define __KERNEL_XML_TYPES_H__
 
-
+ 
 
 class EXmlNodeType
 {
