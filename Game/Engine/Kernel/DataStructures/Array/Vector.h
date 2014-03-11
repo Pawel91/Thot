@@ -215,25 +215,25 @@ void thVector<VECTOR_TEMPLATE_ARGS_NO_TYPE>::ResizeTo( TSize newSize, TSize newC
 {
     THOT_ASSERT( newCapacity > 0);
 
-    //DECLARE_PROFILE_SCOPED("thVector<VECTOR_TEMPLATE_ARGS_NO_TYPE>::ResizeTo");
+    //THOT_DECLARE_PROFILE("thVector<VECTOR_TEMPLATE_ARGS_NO_TYPE>::ResizeTo");
 
     T* newBuffer = NULL;
     if(newCapacity)
     {
-        //DECLARE_PROFILE_SCOPED("thVector::ResizeTo: Allocate buffer");
+        //THOT_DECLARE_PROFILE("thVector::ResizeTo: Allocate buffer");
         // allocate raw memory; we will construct latter
         newBuffer = reinterpret_cast<T*>( m_allocator.AllocAlign( ThNumericCast<unsigned int>( newCapacity * sizeof(T) ), __alignof(T) ) );
     }
 
     if(m_array)
     {
-        //DECLARE_PROFILE_SCOPED("thVector::ResizeTo: Copy elements and destroy older");
+        //THOT_DECLARE_PROFILE("thVector::ResizeTo: Copy elements and destroy older");
         // copy the element that will be used;
         TSize toCopyCount = ThMin<TSize>( m_properties.m_size, newSize );
 
         if(toCopyCount)
         {
-            //DECLARE_PROFILE_SCOPED("thVector::ResizeTo: Helpers::ConstructFromOther");
+            //THOT_DECLARE_PROFILE("thVector::ResizeTo: Helpers::ConstructFromOther");
             Helpers::ConstructFromOther( m_array, newBuffer, toCopyCount );
         }
 
@@ -241,7 +241,7 @@ void thVector<VECTOR_TEMPLATE_ARGS_NO_TYPE>::ResizeTo( TSize newSize, TSize newC
             
 
             {
-                //DECLARE_PROFILE_SCOPED("thVector::ResizeTo: Destroy old data");
+                //THOT_DECLARE_PROFILE("thVector::ResizeTo: Destroy old data");
                 //destroy old data;
                 Helpers::DestroyElements(m_array, 0, m_properties.m_size);
             }
