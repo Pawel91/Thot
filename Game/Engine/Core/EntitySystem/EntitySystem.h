@@ -30,6 +30,7 @@ public:
             u16                 GetMaxEntityCount();
             u16                 GetComponentCount();
             u16                 GetSystemCount();
+            s32                 GetRefCount( TEntityID id)const;
 
     template<class COMPONENT_TYPE>
     void                RegisterComponent(); // must be called before rigster systems
@@ -46,6 +47,7 @@ private:
     void                Release( CEntityHandle& handle );
     IComponent*         GetComponent( TEntityID id, TComponentID);
     CEntity*            GetEntity( TEntityID id );
+
     
     Bool                InsertComponent( TEntityID entID, IComponent* component );
     Bool                RemoveComponent( TEntityID entID, IComponent* component );

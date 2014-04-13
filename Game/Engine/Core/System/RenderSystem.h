@@ -34,7 +34,7 @@ public:
 protected:
 
     SRenderableContainter*              m_renderableContainer;
-    thVector<CEntityHandle>              m_lightEntities;
+    thVector<CEntityHandle>             m_lightEntities;
 
     class CViewportParameterProvider*   m_viewportParameterProvider;
 

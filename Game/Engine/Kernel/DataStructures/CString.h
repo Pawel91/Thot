@@ -16,6 +16,7 @@ class KERNEL_API CString
 public:
 
 inline      CString     ( char* pBuff, Bool ownThisBuffer );
+inline      CString     ( char* pBuffer, thSize bufferSize, Bool ownThisBuffer);
 inline      CString     ( const char* pBuff );
 inline      CString     ( );
 inline      CString     ( const CString& other );

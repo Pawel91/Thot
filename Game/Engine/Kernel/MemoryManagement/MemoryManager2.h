@@ -35,9 +35,12 @@ void operator delete( void*, void* place);
 namespace MemoryManagement
 {
     //[TODO] add alloc align
+
+    /**
+        Main memory manager build on top of other memory managers
+    */
     class KERNEL_API CManager
     {
-    //THOT_DECLARE_SINGLETON_LAZY(CManager);
     public:
     static CManager*        CreateInstance();
     static CManager*        GetInstance();
@@ -60,22 +63,16 @@ namespace MemoryManagement
         
         u64      GetBlockSize        ( void* memory );
         Bool     Validate            ( void* memory );
-#if defined(THOT_ENABLE_MEMORY_TRACKING) // use only the debug versions when tracking is enabled
+#if defined(THOT_MEM_ENABLE_TRACKING) // use only the debug versions when tracking is enabled
     private:
 #endif
         void*    Malloc              ( size_t size );
         void     Free                ( void* memory );
 
-    // INTERNAL MEMORY FUNCTIONS USED TO ALLOCATE
     private:
+        void*   InternalAlloc       ( size_t size);
+        void    InternalFree        ( void* memory);
 
-
-        void*    HeapAlloc           ( size_t size );
-        void     HeapFree            ( void* memory );
-
-    // THE DEFAULT HEAP THAT WE WILL USE TO ALLOCATE MEMORY
-    private:
-        CHeap ms_defaultHeap;
     };
 
 }//namespace MemoryManager
@@ -84,25 +81,25 @@ namespace MemoryManagement
 // standard new/delete operators
 inline void* operator new( size_t size )
 {
-    void* mem = MemoryManagement::CManager::GetInstance()->HeapAlloc( size );
+    void* mem = MemoryManagement::CManager::GetInstance()->InternalAlloc( size );
     return mem;
 }
 
 inline void operator delete( void* memory)
 {
-    MemoryManagement::CManager::GetInstance()->HeapFree( memory );
+    MemoryManagement::CManager::GetInstance()->InternalFree( memory );
 }
 
 // standard array new/delete
 inline void* operator new[]( size_t size)
 {
-    void* mem = MemoryManagement::CManager::GetInstance()->HeapAlloc( size );
+    void* mem = MemoryManagement::CManager::GetInstance()->InternalAlloc( size );
     return mem;
 }
 
 inline void operator delete[](void* mem)
 {
-    MemoryManagement::CManager::GetInstance()->HeapFree( mem );
+    MemoryManagement::CManager::GetInstance()->InternalFree( mem );
 }
 
 inline void* operator new( size_t size, void* place)
@@ -115,7 +112,7 @@ inline void operator delete( void*, void* place)
 }
 
 
-#if defined(THOT_ENABLE_MEMORY_TRACKING)
+#if defined(THOT_MEM_ENABLE_TRACKING)
 #   define THOT_NEW                             MemoryManagement::CNewHandler(__FILE__, __LINE__) * new
 #   define THOT_NEW_ARR                         MemoryManagement::CNewArrayHandler(__FILE__, __LINE__) * new    
 #   define THOT_DELETE(__ptr)                   delete (MemoryManagement::CDeleteHandler(__FILE__, __LINE__) ^ __ptr )
@@ -124,6 +121,13 @@ inline void operator delete( void*, void* place)
 #   define THOT_FREE( __memory )                MemoryManagement::CManager::GetInstance()->Debug_Free( __memory, __FILE__, __LINE__ )
 #   define THOT_MALLOC( __size)                 MemoryManagement::CManager::GetInstance()->Debug_Malloc(__size, __FILE__, __LINE__ )
 #   define THOT_MALLOC_TYPE(__size,type)        (type*)MemoryManagement::CManager::GetInstance()->Debug_Malloc(__size, __FILE__, __LINE__ )
+
+    template <typename T>
+    inline T* THOT_MALLOCT( thSize size)
+    {
+        return (T*)THOT_MALLOC(size);
+    }
+
 #else
 #   define THOT_NEW                             new
 #   define THOT_NEW_ARR                         new
@@ -133,7 +137,7 @@ inline void operator delete( void*, void* place)
 #   define THOT_FREE( __memory )                MemoryManagement::CManager::GetInstance()->Free( __memory )
 #   define THOT_MALLOC( __size)                 MemoryManagement::CManager::GetInstance()->Malloc(__size )
 #   define THOT_MALLOC_TYPE(__size, type)       (type*)MemoryManagement::CManager::GetInstance()->Malloc(__size)
-#endif //THOT_ENABLE_MEMORY_TRACKING
+#endif //THOT_MEM_ENABLE_TRACKING
 
 
 

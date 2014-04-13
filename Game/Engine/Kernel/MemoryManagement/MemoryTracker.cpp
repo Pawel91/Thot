@@ -3,7 +3,7 @@
 #include "Kernel/DataStructures/CString.h"
 #include "Kernel/Utils/StringUtils.h"
 
-#if defined(THOT_ENABLE_MEMORY_TRACKING)
+#if defined(THOT_MEM_ENABLE_TRACKING)
 
 namespace MemoryManagement
 {
@@ -24,7 +24,7 @@ namespace MemoryManagement
     {
         CMemoryOperationWrapper wrapperOperation;
         wrapperOperation.m_memoryOperation = operation;
-#if defined(THOT_CATCH_MEMORY_OPERATION_STACK)
+#if defined(THOT__MEM_CATCH_OPERATION_STACK)
         StackWalker::CStackInfo::GetCurrentStackInfo( wrapperOperation.m_stackInfo );
 #endif
 
@@ -94,4 +94,4 @@ namespace MemoryManagement
 }// namespace MemoryManagement
 
 
-#endif //THOT_ENABLE_MEMORY_TRACKING
+#endif //THOT_MEM_ENABLE_TRACKING

@@ -9,7 +9,7 @@
 #include "Kernel/Externals.h"
 #include "Kernel/KernelUtils.h"
 
-#if defined(THOT_ENABLE_HANDLE_MEMORY_OPERATION)
+#if defined(THOT_MEM_ENABLE_HANDLE_OPERATION)
 #   define MEM_HANDLING_ADD_OPERATION( __buffer, __realBuffer, __size, __realSize, __operation, __objCount, __file, __line) \
     do                                                                                  \
     {                                                                                   \
@@ -28,7 +28,7 @@
 
 #else
 #   define MEM_HANDLING_ADD_OPERATION( __buffer, __realBuffer, __size, __realSize, __operation, __objCount, __file, __line) do{}while(false)
-#endif //THOT_ENABLE_MEMORY_TRACKING
+#endif //THOT_MEM_ENABLE_TRACKING
 
 
 

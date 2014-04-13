@@ -35,6 +35,20 @@
 
 #include "Kernel/DebugSystem/StackWalker.h"
 
+
+#define MY_TEST_XML //REMOVE ME
+#if defined(MY_TEST_XML)
+#   include "Kernel/XML/XmlDocument.h"
+#   include "Kernel/XML/DOMBuilder.h"
+#   include "Kernel/MemoryManagement/FreePool.h"
+#   include "Kernel/MemoryManagement/Bucket.h"
+
+#if defined(GetClassName)
+#   undef GetClassName
+#endif
+
+#endif 
+
 #if defined(CreateFile)
 #   undef CreateFile
 #endif
@@ -126,6 +140,55 @@ CGameManager::~CGameManager()
 //--------------------------------------------------------------------
 void CGameManager::Init ( )
 {
+#if defined(MY_TEST_XML)
+    SYSTEM_INFO siSysInfo;
+    GetSystemInfo(&siSysInfo); 
+    THOT_TRACE("Hardware information: \n");  
+    THOT_TRACE("    OEM ID:                         %u\n", siSysInfo.dwOemId);
+    THOT_TRACE("    Number of processors:           %u\n", siSysInfo.dwNumberOfProcessors); 
+    THOT_TRACE("    Page size:                      %u\n", siSysInfo.dwPageSize); 
+    THOT_TRACE("    Processor type:                 %u\n", siSysInfo.dwProcessorType); 
+    THOT_TRACE("    Minimum application address:    %lx\n",siSysInfo.lpMinimumApplicationAddress); 
+    THOT_TRACE("    Maximum application address:    %lx\n", siSysInfo.lpMaximumApplicationAddress); 
+    THOT_TRACE("    Active processor mask:          %u\n", siSysInfo.dwActiveProcessorMask); 
+
+    CFreePool freePool( 8, 3);
+    void* p1 = freePool.Alloc();
+    void* p2 = freePool.Alloc();
+    void* p3 = freePool.Alloc();
+    freePool.Free( p2 );
+
+    CXMLDocument xmlDocument;
+    CString currentPath;
+
+    FileSystem::FileHandle file = FileSystem::CreateFile( EFileType::E_FILE_TYPE_MEMORY );
+    file->Open( "Data/testXML.abc", EAccesMode::E_ACCES_MODE_READ );
+    
+    u64 fileSize = file->GetSize();
+    char* fileContent = THOT_MALLOCT<char>(fileSize);
+    Memory::Set( fileContent, fileSize, 0);
+    if( !file->Read( fileContent, fileSize, 1 ) )
+    {
+        THOT_ASSERT( false );
+    }
+    THOT_TRACE_LINE("-----------------------------------------------------");
+    THOT_TRACE_LINE("%s", fileContent);
+    THOT_TRACE_LINE("-----------------------------------------------------");
+    
+    CDOMBuilder domBuilder;
+    domBuilder.Parse( fileContent, fileSize );
+    
+    //xmlDocument.SetText( fileContent, fileSize );
+    //xmlDocument.Parse();
+
+    THOT_TRACE_LINE("==== AND AFTER===");
+    THOT_TRACE_LINE("-----------------------------------------------------");
+    THOT_TRACE_LINE("%s", fileContent);
+    THOT_TRACE_LINE("-----------------------------------------------------");
+#endif //MY_TEST_XML
+
+
+
     THOT_ASSERT(CEntitySystem::GetInstance() == NULL, "HERE IS THE BEST PLACE TO INIT THE ENTITY SYSTEM");
 
     CEntitySystem::CreateInstance();
@@ -211,6 +274,7 @@ void CGameManager::Init ( )
 
     // Space Ship Camera
     CEntityHandle spaceShipCameraEntity = CEntitySystem::GetInstance()->CreateNewEntity();
+    spaceShipCameraEntity->SetDebugName("spaceShipCameraEntity");
     //freeCameraEntity->InsertComponent( THOT_NEW CFreeCameraComponent );
     spaceShipCameraEntity->InsertComponent( THOT_NEW CSpaceShipCameraComponent );
     spaceShipCameraEntity->InsertComponent( THOT_NEW CBindingComponent );
@@ -218,12 +282,15 @@ void CGameManager::Init ( )
 
     // free camera
     CEntityHandle freeCameraEntity = CEntitySystem::GetInstance()->CreateNewEntity();
+    freeCameraEntity->SetDebugName("freeCameraEntity");
     freeCameraEntity->InsertComponent( THOT_NEW CFreeCameraComponent);
     freeCameraEntity->InsertComponent( THOT_NEW CBindingComponent);
 
 
     // TEST SOME LIGHTS
     CEntityHandle lightEntity = CEntitySystem::GetInstance()->CreateNewEntity();
+    s32 refCount = CEntitySystem::GetInstance()->GetRefCount(lightEntity->GetID());
+    lightEntity->SetDebugName("lightEntity");
     CLightComponent* lightComponent = THOT_NEW CLightComponent;
     lightEntity->InsertComponent( lightComponent );
     lightEntity->InsertComponent( THOT_NEW CBindingComponent );

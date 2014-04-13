@@ -57,6 +57,17 @@ void CEntitySystem::AddRef( CEntityHandle& handle )
     m_entityPool->AddRef( handle );
 }
 
+//--------------------------------------------------------------------------------
+s32 CEntitySystem::GetRefCount( TEntityID id)const
+{
+    if( id == INVALID_ENTITY_ID )
+    {
+        return 0;
+    }
+
+    return m_entityPool->GetRefCount(id);
+}
+
 //------------------------------------------------------------
 void CEntitySystem::Release( CEntityHandle& handle )
 {
@@ -156,6 +167,11 @@ Bool CEntitySystem::RemoveComponent( TEntityID entID, TComponentID componentID)
 //--------------------------------------------------------------------------------
 void CEntitySystem::RemoveAllComponents( TEntityID entID )
 {
+    if(entID == INVALID_ENTITY_ID)
+    {
+        return;
+    }
+
     for( u16 i=0; i <GetComponentCount(); i++ )
     {
         RemoveComponent( entID, TComponentID(i) );

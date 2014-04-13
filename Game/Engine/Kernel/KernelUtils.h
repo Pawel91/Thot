@@ -5,6 +5,40 @@
 #include "Kernel/DebugSystem/Assert.h"
 #include "Kernel/Defines.h"
 
+template<class T, class U>
+class thPair
+{
+public:
+    typedef thPair<T,U> TSelf;
+
+    thPair()
+    {
+    }
+
+    thPair( const T& first, const U& second)
+        : m_first(first)
+        , m_second(second)
+    {
+    }
+
+    thPair( const TSelf& other )
+        : m_first(other.m_first)
+        , m_second(other.m_second)
+    {
+    }
+
+    const TSelf& operator = ( const TSelf& other)
+    {
+        m_first = other.m_first;
+        m_second = other.m_second;
+    }
+
+public:
+    T   m_first;
+    U   m_second;
+};
+
+
 //--------------------------------------------------------------------------------
 inline float bToKb( u64 bytes)
 {
@@ -18,6 +52,14 @@ inline T ThMax( const T&a, const U& b )
 {
     T _b = ThNumericCast<T>(b);
     return (a>_b)?a:_b;
+}
+
+template<class T>
+inline void ThSwap( T& first, T& second )
+{
+    T temp = first;
+    first = second;
+    second = temp;
 }
 
 //--------------------------------------------------------------------------------

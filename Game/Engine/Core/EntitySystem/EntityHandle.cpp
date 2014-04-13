@@ -31,6 +31,7 @@ CEntityHandle::~CEntityHandle()
 void CEntityHandle::Release()
 {
     CEntitySystem::GetInstance()->Release( *this );
+    m_entityID = INVALID_ENTITY_ID;
 }
 
 //---------------------------------------------------

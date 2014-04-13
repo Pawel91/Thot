@@ -50,7 +50,7 @@ CSceneRenderableNode::~CSceneRenderableNode()
 //        return;
 //    }
 //    
-//    DECLARE_PROFILE_SCOPED("CSceneRenderableNode::OnDraw");
+//    THOT_DECLARE_PROFILE("CSceneRenderableNode::OnDraw");
 //
 //#if defined(TEST_SHADER_TEXTURE)
 //    Soil_TextureHeader header;
@@ -116,7 +116,7 @@ CSceneRenderableNode::~CSceneRenderableNode()
 //    {
 //        RENDER_GUARD_BLOCK
 //
-//        DECLARE_PROFILE_SCOPED("Skeleton shader matrices update");
+//        THOT_DECLARE_PROFILE("Skeleton shader matrices update");
 //
 //        // const thVector<m4x4>& boneMatrices = m_skeleton->GetBoneMatrices();
 //        //CShader::GetCurrentShader()->SetBoneMatrices(boneMatrices);
@@ -159,7 +159,7 @@ void CSceneRenderableNode::OnInit()
 //--------------------------------------------------------------------------
 void CSceneRenderableNode::OnUpdateThis( float fDeltaTime )
 {
-    DECLARE_PROFILE_SCOPED("CSceneRenderableNode::OnUpdate");
+    THOT_DECLARE_PROFILE("CSceneRenderableNode::OnUpdate");
 
     //if( m_skeleton )
     //{

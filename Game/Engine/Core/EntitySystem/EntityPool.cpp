@@ -33,7 +33,7 @@ IComponent* CEntityPool::GetComponent( TEntityID id, TComponentID compID)
 //----------------------------------------------------------------------
 void CEntityPool::AddRef( CEntityHandle& handle )
 {
-    DECLARE_PROFILE_SCOPED("CEntityPool::AddRef");
+    THOT_DECLARE_PROFILE("CEntityPool::AddRef");
     TEntityID id = INVALID_ENTITY_ID;
     if( (id =  handle.m_entityID) == INVALID_ENTITY_ID)
     {
@@ -43,10 +43,17 @@ void CEntityPool::AddRef( CEntityHandle& handle )
     m_entityContainer[id].m_refCount++;
 }
 
+
+//--------------------------------------------------------------------------------
+s32 CEntityPool::GetRefCount( TEntityID id)const
+{
+    return m_entityContainer[id].m_refCount;
+}
+
 //----------------------------------------------------------------------
 void CEntityPool::Release( CEntityHandle& handle )
 {
-    DECLARE_PROFILE_SCOPED("CEntityPool::Release");
+    THOT_DECLARE_PROFILE("CEntityPool::Release");
 
     TEntityID id = INVALID_ENTITY_ID;
     if( (id =  handle.m_entityID) == INVALID_ENTITY_ID)
@@ -55,11 +62,13 @@ void CEntityPool::Release( CEntityHandle& handle )
     }
 
     THOT_ASSERT(m_entityContainer);
+    THOT_ASSERT( m_entityContainer? (m_entityContainer[id].m_refCount -1 >= 0) : true);
 
-    if( m_entityContainer &&  (-- m_entityContainer[id].m_refCount) <= 0 )
+    if( m_entityContainer &&  (m_entityContainer[id].m_refCount - 1) == 0 )
     {
+        m_entityContainer[id].m_refCount --;
         // destroy the entity
-        m_entityContainer[id].m_entity.~CEntity();
+        DestroyEntity( id );
 
         // reinit to be ready for use
         new( &m_entityContainer[id].m_entity ) CEntity();
@@ -67,10 +76,16 @@ void CEntityPool::Release( CEntityHandle& handle )
 
         RecycleEntity( handle );
     }
+    else
+    {
+        m_entityContainer[id].m_refCount --;
+    }
+
+    
 }
 
 //----------------------------------------------------------------------
-void CEntityPool::RecycleEntity( CEntityHandle handle )
+void CEntityPool::RecycleEntity( CEntityHandle& handle )
 {
     if( handle.m_entityID == INVALID_ENTITY_ID )
     {
@@ -84,16 +99,14 @@ void CEntityPool::RecycleEntity( CEntityHandle handle )
 CEntityPool::CEntityPool( u16 maxEntityCount, u16 componentCount )
     : m_maxEntityCount  ( maxEntityCount )
     , m_componentCount  ( componentCount )
+    , m_entityContainer (NULL)
 {
 }
 
 //----------------------------------------------------------------------
 void CEntityPool::Init( )
 {
-    if(!m_entityContainer)
-    {
-        return;
-    }
+    THOT_ASSERT(m_entityContainer == NULL, "CEntityPool::Init called twice?");
 
     m_entityContainer = THOT_NEW_ARR SEntityInfo[m_maxEntityCount];
     for( u16 i=0; i<m_maxEntityCount; i++ )
@@ -120,10 +133,19 @@ CEntityPool::~CEntityPool()
         return;
     }
 
+    //remove all components
+    for( TEntityID entID=0; entID<m_maxEntityCount; entID++)
+    {
+        for( TComponentID compID =0; compID<m_componentCount; compID++ )
+        {
+            RemoveComponent(entID, compID);
+        }
+    }
+
     //destroy all entities
     for( TEntityID entID=0; entID<m_maxEntityCount; entID++)
     {
-        m_entityContainer[entID].m_entity.~CEntity();
+        DestroyEntity( entID );
         THOT_DELETE_ARR( m_entityContainer[entID].m_components );
         m_entityContainer[entID].m_components = NULL;
     }
@@ -131,6 +153,14 @@ CEntityPool::~CEntityPool()
     THOT_DELETE_ARR( m_entityContainer );
     m_entityContainer = NULL;
 }
+
+//--------------------------------------------------------------------------------
+void CEntityPool::DestroyEntity( TEntityID entityID )
+{
+    CEntity& entity = m_entityContainer[entityID].m_entity;
+    entity.~CEntity();
+}
+
 
 //--------------------------------------------------------------------------------
 CEntity* CEntityPool::GetEntity( TEntityID id)
@@ -210,7 +240,11 @@ Bool CEntityPool::RemoveComponent(TEntityID entID, TComponentID componentID)
     }
 
     THOT_TODO("REVIEW THE DELETE OF COMPONENT HERE");
-    THOT_SAFE_DELETE( component );
+
+    //before deletion put the pointer to NULL to avoid a recursive call to this function
+    IComponent* toDelete = component;
+    component = NULL;
+    THOT_SAFE_DELETE( toDelete );
 
     return true;
 }

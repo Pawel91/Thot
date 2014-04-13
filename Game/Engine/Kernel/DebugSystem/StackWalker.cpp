@@ -151,7 +151,7 @@ namespace StackWalker
     //--------------------------------------------------------------------------------
     void CStackInfo::GetCurrentStackInfo( CStackInfo& outStackInfo, u32 stackFramesCount )
     {
-        //DECLARE_PROFILE_SCOPED("CStackInfo::GetCurrentStackInfo");
+        //THOT_DECLARE_PROFILE("CStackInfo::GetCurrentStackInfo");
         static bool init = false;
         if(!init)
         {

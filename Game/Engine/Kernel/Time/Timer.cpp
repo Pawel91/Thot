@@ -5,19 +5,25 @@
 #include "Kernel/ThotWindows.h"
 
 
-
-LARGE_INTEGER GetFrequency()
+namespace __detail
 {
-    LARGE_INTEGER frequency;
-    if( !QueryPerformanceFrequency(&frequency) )
+    LARGE_INTEGER GetFrequency()
     {
-        THOT_ASSERT(false, "Failed to init timer");
+        LARGE_INTEGER frequency;
+        if( !QueryPerformanceFrequency(&frequency) )
+        {
+            THOT_ASSERT(false, "Failed to init timer");
+        }
+    
+        return frequency;
     }
-
-    return frequency;
 }
 
-static const LARGE_INTEGER g_frequency = GetFrequency( );
+const LARGE_INTEGER& GetFrequency()
+{
+    static const LARGE_INTEGER frequency = __detail::GetFrequency();
+    return frequency;
+}
 
 
 
@@ -43,12 +49,12 @@ CTimer::TimeUnits CTimer::Stop()
         THOT_ASSERT(false, "CTimer: Failed to get end time");
     }
 
-    return (CTimer::TimeUnits)( m_endTime - m_startTime) / (g_frequency.QuadPart/1000000);
+    return (CTimer::TimeUnits)( m_endTime - m_startTime) / (GetFrequency().QuadPart/1000000);
 }
 
 CTimer::TimeUnits CTimer::GetTimerValue( )
 {
-    return (CTimer::TimeUnits)( m_endTime - m_startTime) / (g_frequency.QuadPart/1000000);
+    return (CTimer::TimeUnits)( m_endTime - m_startTime) / (GetFrequency().QuadPart/1000000);
 }
 
 

@@ -49,7 +49,8 @@ Bool  CMemoryFile::Open   ( const CString& path, u64 openMode )
             return false;
         }
 
-        m_fileContent.Resize( nFileSize );
+        m_fileContent.Resize( nFileSize + 1 );
+        Memory::Set(m_fileContent.GetData(), m_fileContent.Size(), 0);
         if ( !m_pFile->Read( m_fileContent.GetData(), nFileSize, 1 ) )
         {
             TRACE_FILE("ERROR! Could not read all file data when opening CMemoryFile");

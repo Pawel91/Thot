@@ -32,7 +32,7 @@ private:
     void            Init                ( );
     CEntity*        GetEntity           ( TEntityID id);
     CEntityHandle   GetNewEntity        ( );
-    void            RecycleEntity       ( CEntityHandle handle );
+    void            RecycleEntity       ( CEntityHandle& handle );
     IComponent*     GetComponent        ( TEntityID id, TComponentID compID);
 
     Bool            InsertComponent     ( TEntityID entID, IComponent* component );
@@ -42,6 +42,11 @@ private:
     void            AddRef              ( CEntityHandle& handle );
     void            Release             ( CEntityHandle& handle );
     bool            ValidateEntityID    ( TEntityID id );
+    s32             GetRefCount         ( TEntityID id)const;
+
+private:
+    void            DestroyEntity       ( TEntityID entityID );
+
 
 protected:
     u16                     m_maxEntityCount;

@@ -16,7 +16,7 @@ void CMesh<TVertexType, TIndexType>::OnDraw( )const
 {
 RENDER_GUARD_BLOCK
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
     CTimer timerDrawCall; timerDrawCall.Start();
 #endif
 
@@ -28,7 +28,7 @@ RENDER_GUARD_BLOCK
 
     m_vertexArray.DrawElements( (eGeometricPrimitive)m_ePrimitiveType, size );
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
     timerDrawCall.Stop();
 #endif
 

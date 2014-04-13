@@ -119,7 +119,7 @@ CBone*  CSkeleton::GetRootBone     ()
 //------------------------------------------------------------------------------------------
 void CSkeleton::Update( float fDeltaTime )
 {
-    DECLARE_PROFILE_SCOPED( "CSkeleton::Update" );
+    THOT_DECLARE_PROFILE( "CSkeleton::Update" );
 
     static const float fAnimTime = 2.f;
     static float fCurrTime = 0.f;

@@ -107,6 +107,32 @@ u32 CFreePool::GetMemoryOverhead()const
 }
 
 //--------------------------------------------------------------------------------
+Bool CFreePool::Validate(void* ptr)
+{
+    if( !IsPointerFromHere(ptr) )
+    {
+        return false;
+    }
+
+    if( !( ThNumericCast<u32>((u8*)ptr - m_rawData)%m_elementSize == 0 ) )
+    {
+        //cannot be a valid element because is not aligned at m_elementSize;
+        return false;
+    }
+
+    // the pointer is valid if is not in the free list
+    for( SListNode* node = (SListNode*)m_freeHead; node!=NULL; node = (SListNode*)node->m_nextNode )
+    {
+        if( ptr == node )
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------
 void CFreePool::PushFree(void* element)
 {
     THOT_ASSERT( IsPointerFromHere(element) && m_usedElementCount <= m_poolSize );
@@ -128,7 +154,6 @@ void CFreePool::Release()
     m_rawData = NULL;
     m_freeHead = NULL;
     m_usedElementCount = 0;
-    
 }
 
 //--------------------------------------------------------------------------------

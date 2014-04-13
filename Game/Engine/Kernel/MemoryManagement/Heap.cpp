@@ -65,7 +65,7 @@ void* CHeap::Alloc( u64 size, CHeap::EFlags flags )
 void  CHeap::Free( void* memory, CHeap::EFlags flags )
 {
     DECLARE_PROFILE_SCOPED_HIT_INFO("CHeap::Free", "memorySize = [%d b], [%.3f kb]", GetBlockSize(memory), bToKb(GetBlockSize(memory)) );
-    //DECLARE_PROFILE_SCOPED("CHeap::Free");
+    //THOT_DECLARE_PROFILE("CHeap::Free");
 
     flags = FLAG_NONE;
     THOT_ASSERT( ValidateBlock( memory), "TRYING TO FREE MEMORY WHICH IS NOT FROM THIS HEAP OR IT WAS CORRUPTED" );

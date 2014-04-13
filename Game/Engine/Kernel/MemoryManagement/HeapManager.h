@@ -21,6 +21,7 @@ namespace MemoryManagement
     //*********************************************
     public:
         CHeapManager();
+        ~CHeapManager();
 
     //*********************************************
     //            INTERFACE

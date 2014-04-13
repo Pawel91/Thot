@@ -42,7 +42,7 @@ public:
     u32                     GetPoolSize();//total size in elements
     u32                     GetUsedElementCount();
     u32                     GetMemoryOverhead()const;
-    
+    Bool                    Validate(void* ptr);
 
 
 //*********************************************

@@ -5,7 +5,6 @@
 
 namespace MemoryManagement
 {
-
 //--------------------------------------------------------------------------------
 CHeapManager* CHeapManager::GetInstance()
 {
@@ -27,6 +26,11 @@ void CHeapManager::DestroyInstance()
 //--------------------------------------------------------------------------------
 CHeapManager::CHeapManager()
     : m_defaultHeap( CHeap::FLAG_NO_LOCK, 1 * 1024 * 1024 * 1024, 0 )
+{
+}
+
+//--------------------------------------------------------------------------------
+CHeapManager::~CHeapManager()
 {
 }
 

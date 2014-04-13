@@ -14,7 +14,9 @@ CEntity::CEntity()
 //--------------------------------------------------------------------------------
 CEntity::~CEntity()
 {
+    THOT_ASSERT( CEntitySystem::GetInstance()->GetRefCount(m_entityID) == 0, "DANGLING ENTITY HANDLES ARE LEFT! count = [%d]", CEntitySystem::GetInstance()->GetRefCount(m_entityID) );
     RemoveAllComponents();
+    m_entityID = INVALID_ENTITY_ID;
 }
 
 //--------------------------------------------------------------------------------

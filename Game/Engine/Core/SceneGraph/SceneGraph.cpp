@@ -35,7 +35,7 @@ CSceneGraph::~CSceneGraph()
 //void CSceneGraph::OnDraw( )const
 //{
 //RENDER_GUARD_BLOCK
-//    DECLARE_PROFILE_SCOPED("CSceneGraph::OnDraw()");
+//    THOT_DECLARE_PROFILE("CSceneGraph::OnDraw()");
 //
 //    if( m_rootNode )
 //    {
@@ -150,7 +150,7 @@ void CSceneGraph::GetRenderableNodes(ISceneNode* node, thVector<IMesh*>& outNode
 //----------------------------------------------------------------------
 void CSceneGraph::OnUpdate( float fDeltaTime )
 {
-    DECLARE_PROFILE_SCOPED( "CSceneGraph::OnUpdate");
+    THOT_DECLARE_PROFILE( "CSceneGraph::OnUpdate");
 
     if( !m_rootNode )
     {

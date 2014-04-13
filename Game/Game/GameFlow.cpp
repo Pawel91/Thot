@@ -57,7 +57,7 @@ void ParseCommandLine ( const char* cmdLine, SGameStartupParams& outGameParams )
 
 void SwapBuffers( void* windowHandle )
 {
-    DECLARE_PROFILE_SCOPED("SwapBuffers");
+    THOT_DECLARE_PROFILE("SwapBuffers");
 
     static HWND nativeWindowHandle = (HWND)windowHandle;
     static HDC nativeDeviceContextHandle = GetDC(nativeWindowHandle);
@@ -70,7 +70,7 @@ bool InitGame ( void* windowHandle )
 
     HWND nativeWindowHandle = (HWND) windowHandle;
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
     if( !ThotProfiler::CManager::CreateInstance() )
     {
         return false;
@@ -125,7 +125,7 @@ void LoopGame ( )
 {
     float fDeltaTime = CFrameTimeManager::GetInstance()->GetGameTime( );
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
 
     const CKeyInputInterface* pKeyboard = CInput::GetInstance()->GetDeviceInputT<CKeyInputInterface>(InputDevices::E_INPUT_DEVICE_KEYBOARD);
     if( pKeyboard->ButtonUp( InputKey::E_KEY_P ) )
@@ -135,7 +135,7 @@ void LoopGame ( )
 #endif
 
     {
-        DECLARE_PROFILE_SCOPED("INPUT PROCESS");
+        THOT_DECLARE_PROFILE("INPUT PROCESS");
 
         CInput::GetInstance()->SetDeltaTime( fDeltaTime );
         CInput::GetInstance()->OnAfterUserInput();
@@ -143,13 +143,13 @@ void LoopGame ( )
 
 
     {
-        DECLARE_PROFILE_SCOPED("RENDER LOOP");
+        THOT_DECLARE_PROFILE("RENDER LOOP");
         
         CRender::GetInstance()->Render( );
     }
 
     {
-        DECLARE_PROFILE_SCOPED("UPDATE LOOP");
+        THOT_DECLARE_PROFILE("UPDATE LOOP");
 
         CGameManager::GetInstance()->OnUpdate( fDeltaTime );
     }
@@ -188,7 +188,7 @@ void OnBeginFrame()
     CFrameTimeManager::GetInstance()->OnBeginFrame();
     CGameManager::GetInstance()->OnBeginFrame();
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
     ThotProfiler::CManager::GetInstance()->OnBeginFrame();
 #endif
 }
@@ -196,7 +196,7 @@ void OnBeginFrame()
 void OnEndFrame( )
 {
     CGameManager::GetInstance()->OnEndFrame();
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
     ThotProfiler::CManager::GetInstance()->OnEndFrame();
 #endif
 

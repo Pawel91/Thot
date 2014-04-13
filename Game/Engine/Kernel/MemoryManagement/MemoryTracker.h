@@ -4,13 +4,13 @@
 #include "Kernel/MemoryManagement/MemoryConfig.h"
 
 
-#if defined(THOT_ENABLE_MEMORY_TRACKING)
+#if defined(THOT_MEM_ENABLE_TRACKING)
 
 #include "Kernel/MemoryManagement/MemoryOperation.h"
 #include "Kernel/MetaTemplates/MetaTemplates.h"
 #include "Kernel/SingletonLazy.h"
 
-#if defined(THOT_CATCH_MEMORY_OPERATION_STACK)
+#if defined(THOT__MEM_CATCH_OPERATION_STACK)
 #   include "Kernel/DebugSystem/StackWalker.h"
 #endif 
 
@@ -29,7 +29,7 @@ namespace MemoryManagement
         public:
             CMemoryOperation            m_memoryOperation;
 
-#if defined(THOT_CATCH_MEMORY_OPERATION_STACK)
+#if defined(THOT__MEM_CATCH_OPERATION_STACK)
             StackWalker::CStackInfo     m_stackInfo;
 #endif
         };
@@ -58,6 +58,6 @@ namespace MemoryManagement
 
 }// namespace MemoryManagement
 
-#endif //THOT_ENABLE_MEMORY_TRACKING
+#endif //THOT_MEM_ENABLE_TRACKING
 
 #endif //__KERNEL_MEMORY_TRACKER_H__

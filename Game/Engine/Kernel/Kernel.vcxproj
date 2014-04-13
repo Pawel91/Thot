@@ -122,7 +122,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;KERNEL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\\;..//..//externals\Xerces\include\</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
@@ -133,8 +133,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Shlwapi.lib;Dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Shlwapi.lib;Dbghelp.lib;xerces-c_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..//..//externals/boost/lib/x64;..//..//externals\Xerces\lib\</AdditionalLibraryDirectories>
       <Profile>true</Profile>
     </Link>
     <Manifest>
@@ -207,8 +207,14 @@
     </ClCompile>
     <ClCompile Include="ManagerInterface.cpp" />
     <ClCompile Include="MemoryManagement\Allocator.cpp" />
+    <ClCompile Include="MemoryManagement\Bucket.cpp" />
+    <ClCompile Include="MemoryManagement\BucketAllocator.cpp" />
+    <ClCompile Include="MemoryManagement\BucketPool.cpp" />
+    <ClCompile Include="MemoryManagement\BucketPoolBase.cpp" />
     <ClCompile Include="MemoryManagement\FrameAllocator.cpp" />
+    <ClCompile Include="MemoryManagement\FreePool.cpp" />
     <ClCompile Include="MemoryManagement\Heap.cpp" />
+    <ClCompile Include="MemoryManagement\HeapManager.cpp" />
     <ClCompile Include="MemoryManagement\MemoryHandling.cpp" />
     <ClCompile Include="MemoryManagement\MemoryManager2.cpp" />
     <ClCompile Include="MemoryManagement\MemoryOperation.cpp" />
@@ -221,10 +227,20 @@
     <ClCompile Include="RTTI.cpp" />
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="ThreadApi\CriticalSection.cpp" />
+    <ClCompile Include="ThreadApi\Event.cpp" />
     <ClCompile Include="ThreadApi\Thread.cpp" />
     <ClCompile Include="Time\Timer.cpp" />
     <ClCompile Include="Utils\Command.cpp" />
     <ClCompile Include="Utils\StringUtils.cpp" />
+    <ClCompile Include="XML\DOMBuilder.cpp" />
+    <ClCompile Include="XML\SAX\SAX.cpp" />
+    <ClCompile Include="XML\SAX\SAXHandler.cpp" />
+    <ClCompile Include="XML\SAX\SAXUtils.cpp" />
+    <ClCompile Include="XML\XMLAllocator.cpp" />
+    <ClCompile Include="XML\XmlAttribute.cpp" />
+    <ClCompile Include="XML\XMLBase.cpp" />
+    <ClCompile Include="XML\XmlDocument.cpp" />
+    <ClCompile Include="XML\XMLNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basics.h" />
@@ -267,8 +283,15 @@
     <ClInclude Include="Kernel_PCH.h" />
     <ClInclude Include="ManagerInterface.h" />
     <ClInclude Include="MemoryManagement\Allocator.h" />
+    <ClInclude Include="MemoryManagement\Bucket.h" />
+    <ClInclude Include="MemoryManagement\BucketAllocator.h" />
+    <ClInclude Include="MemoryManagement\BucketPool.h" />
+    <ClInclude Include="MemoryManagement\BucketPoolBase.h" />
+    <ClInclude Include="MemoryManagement\BucketsConfig.h" />
     <ClInclude Include="MemoryManagement\FrameAllocator.h" />
+    <ClInclude Include="MemoryManagement\FreePool.h" />
     <ClInclude Include="MemoryManagement\Heap.h" />
+    <ClInclude Include="MemoryManagement\HeapManager.h" />
     <ClInclude Include="MemoryManagement\MemoryConfig.h" />
     <ClInclude Include="MemoryManagement\MemoryHandling.h" />
     <ClInclude Include="MemoryManagement\MemoryManager2.h" />
@@ -290,13 +313,26 @@
     <ClInclude Include="ThotWindows.h" />
     <ClInclude Include="ThreadApi\AutoLock.h" />
     <ClInclude Include="ThreadApi\CriticalSection.h" />
+    <ClInclude Include="ThreadApi\Event.h" />
     <ClInclude Include="ThreadApi\Thread.h" />
+    <ClInclude Include="ThreadApi\ThreadTypes.h" />
     <ClInclude Include="Time\Timer.h" />
     <ClInclude Include="Utils\Command.h" />
     <ClInclude Include="Utils\RefCounter.h" />
     <ClInclude Include="Utils\SmartPointer.h" />
     <ClInclude Include="Utils\SmartResource.h" />
     <ClInclude Include="Utils\StringUtils.h" />
+    <ClInclude Include="XML\DOMBuilder.h" />
+    <ClInclude Include="XML\SAX\SAX.h" />
+    <ClInclude Include="XML\SAX\SAXHandler.h" />
+    <ClInclude Include="XML\SAX\SAXUtils.h" />
+    <ClInclude Include="XML\XMLAllocator.h" />
+    <ClInclude Include="XML\XmlAttribute.h" />
+    <ClInclude Include="XML\XMLBase.h" />
+    <ClInclude Include="XML\XMLConfig.h" />
+    <ClInclude Include="XML\XmlDocument.h" />
+    <ClInclude Include="XML\XMLNode.h" />
+    <ClInclude Include="XML\XmlTypes.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataStructures\Array\List.inl" />

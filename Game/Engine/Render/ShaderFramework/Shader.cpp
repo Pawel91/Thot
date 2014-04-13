@@ -252,7 +252,7 @@ void CShader::SetupProviders( const IShaderParameterProvider* providers, u32 cou
 //---------------------------------------------------------------------------------------
 void CShader::SetupParameterProvider ( const IShaderParameterProvider& parameterProvider )const
 {
-    DECLARE_PROFILE_SCOPED( "CShader::SetupParameterProvider" );
+    THOT_DECLARE_PROFILE( "CShader::SetupParameterProvider" );
 
     ParameterProviderType providerType = parameterProvider.GetType();
 
@@ -268,7 +268,7 @@ void CShader::SetupParameterProvider ( const IShaderParameterProvider& parameter
             IShaderParameter& shaderParameter = *(IShaderParameter*) ( (byte*) &parameterProvider + parameterInfo[j].m_dataOffset );
             
             {
-                DECLARE_PROFILE_SCOPED("shaderParameter.SetParameterShaderData");
+                THOT_DECLARE_PROFILE("shaderParameter.SetParameterShaderData");
                 RENDER_VERIFY;
                 shaderParameter.SetParameterShaderData( parameterInfo[j].m_locationID );
                 RENDER_VERIFY;

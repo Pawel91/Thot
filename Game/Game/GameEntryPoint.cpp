@@ -436,7 +436,7 @@ void windows::GameLoop ( )
     bool exit = false;
     for(;;)
     {
-        DECLARE_PROFILE_SCOPED("windows::GameLoop");
+        THOT_DECLARE_PROFILE("windows::GameLoop");
 
         Game::OnBeginFrame();
 
@@ -452,7 +452,7 @@ void windows::GameLoop ( )
         }
 
        {
-        DECLARE_PROFILE_SCOPED("window message processing");
+        THOT_DECLARE_PROFILE("window message processing");
             
             while ( PeekMessage (&msg, NULL, 0, 0, PM_NOREMOVE) )
             {

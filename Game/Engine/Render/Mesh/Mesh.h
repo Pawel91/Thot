@@ -9,7 +9,7 @@
 #include "Render/Buffers/IndexBuffer.h"
 #include "Render/Buffers/VertexArray.h"
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
 #   include "Kernel\Time\Timer.h"
 #endif 
 

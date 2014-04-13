@@ -1,4 +1,3 @@
-#pragma once
 #ifndef __KERNEL_DEF_H__
 #define __KERNEL_DEF_H__
 

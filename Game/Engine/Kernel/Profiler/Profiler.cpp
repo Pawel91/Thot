@@ -1,7 +1,7 @@
 #include "Kernel_PCH.h"
 #include "Profiler.h"
 
-#if defined(THOT_ENABLE_PROFILER)
+#if defined(THOT_PROFILER_ENABLE)
 
 #include "Kernel/Defines.h"
 #include "Kernel/Utils/StringUtils.h"
@@ -206,4 +206,4 @@ namespace ThotProfiler
 
 }// namespace ThotProfiler
 
-#endif //#if defined(THOT_ENABLE_PROFILER)
+#endif //#if defined(THOT_PROFILER_ENABLE)

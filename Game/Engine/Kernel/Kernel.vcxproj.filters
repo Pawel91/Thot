@@ -46,6 +46,12 @@
     <Filter Include="Basics">
       <UniqueIdentifier>{bb100219-0305-45e5-a968-5276b257b3e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{1276a4c7-86b1-4055-a6c3-c8eb703366cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML\SAX">
+      <UniqueIdentifier>{49521e64-cd83-4ff2-a7d7-52043f1f59c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DebugSystem\Assert.cpp">
@@ -135,6 +141,54 @@
       <Filter>MemoryManagement</Filter>
     </ClCompile>
     <ClCompile Include="MemoryManagement\Allocator.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadApi\Event.cpp">
+      <Filter>ThreadApi</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XmlAttribute.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLBase.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XmlDocument.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLNode.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\SAX\SAXUtils.cpp">
+      <Filter>XML\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\SAX\SAXHandler.cpp">
+      <Filter>XML\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\SAX\SAX.cpp">
+      <Filter>XML\SAX</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\DOMBuilder.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XMLAllocator.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\FreePool.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\HeapManager.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\Bucket.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\BucketPool.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\BucketAllocator.cpp">
+      <Filter>MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\BucketPoolBase.cpp">
       <Filter>MemoryManagement</Filter>
     </ClCompile>
   </ItemGroup>
@@ -312,6 +366,66 @@
     </ClInclude>
     <ClInclude Include="DataStructures\FixedString.h">
       <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadApi\Event.h">
+      <Filter>ThreadApi</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadApi\ThreadTypes.h">
+      <Filter>ThreadApi</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlAttribute.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLBase.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlDocument.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLNode.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlTypes.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLConfig.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\SAX\SAXUtils.h">
+      <Filter>XML\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\SAX\SAXHandler.h">
+      <Filter>XML\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\SAX\SAX.h">
+      <Filter>XML\SAX</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\DOMBuilder.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XMLAllocator.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\FreePool.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\HeapManager.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\Bucket.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\BucketPool.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\BucketAllocator.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\BucketPoolBase.h">
+      <Filter>MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManagement\BucketsConfig.h">
+      <Filter>MemoryManagement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

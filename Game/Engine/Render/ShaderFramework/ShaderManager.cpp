@@ -125,7 +125,7 @@ CShader* CShaderManager::GetShaderFromID( ShaderID shaderID)
 {
     THOT_ASSERT(m_privateData, "SHADER MANAGER PRIVATE DATA IS NULL");
 
-    DECLARE_PROFILE_SCOPED("CShaderManager::GetShaderFromID");
+    THOT_DECLARE_PROFILE("CShaderManager::GetShaderFromID");
 
     TShadersIDMap::const_iterator it = m_privateData->m_shadersIDMap.find( shaderID );
     if( it == m_privateData->m_shadersIDMap.end() )
@@ -141,7 +141,7 @@ void CShaderManager::BindShader( ShaderID shaderID )
 {
     THOT_ASSERT(shaderID != INVALID_SHADERID);
 
-    DECLARE_PROFILE_SCOPED("CShaderManager::BindShader");
+    THOT_DECLARE_PROFILE("CShaderManager::BindShader");
 
 #if defined(THOT_ENABLE_DEBUG)
     THOT_ASSERT( m_currentActiveShaderID != shaderID, "BINDING SAME SHADER MULTIPLE TIMES");

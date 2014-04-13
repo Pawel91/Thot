@@ -4,8 +4,8 @@
 
 #include "Kernel/Config.h"
 
-// this file if compiled only it THOT_ENABLE_PROFILER is defined
-#if defined( THOT_ENABLE_PROFILER)
+// this file if compiled only it THOT_PROFILER_ENABLE is defined
+#if defined( THOT_PROFILER_ENABLE)
 
 
 #include "Kernel/DebugSystem/DebugSystem.h"
@@ -192,7 +192,7 @@ namespace ThotProfiler
 }// namespace ThotProfiler
 
 
-#define DECLARE_PROFILE_SCOPED(__description )\
+#define THOT_DECLARE_PROFILE(__description )\
 static    ThotProfiler::CPlaceID  __placeID  ( ThotProfiler::SPlaceInfo( __FILE__, __FUNCSIG__, __LINE__, __description) );   \
 ThotProfiler::CScopedProfiler __scopedProfiler ( __placeID )
 
@@ -202,9 +202,9 @@ ThotProfiler::CScopedProfiler __scopedProfiler ( __placeID, StringUtils::FormatS
 
 #else 
 
-#define DECLARE_PROFILE_SCOPED(__description)
+#define THOT_DECLARE_PROFILE(__description)
 
-#endif //THOT_ENABLE_PROFILER
+#endif //THOT_PROFILER_ENABLE
 
 
 #endif //__KERNEL_PROFILER_H__

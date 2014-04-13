@@ -42,6 +42,12 @@ DECLARE_CONSTRUCTOR_LIST
     }
 }
 
+//--------------------------------------------------------------------------------
+//inline CString::CString( char* pBuffer, thSize bufferSize, Bool ownThisBuffer)
+//{
+//
+//}
+
 inline CString::CString ( const char* pBuff )
 DECLARE_CONSTRUCTOR_LIST
 {
